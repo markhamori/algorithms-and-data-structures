@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "section2": "nodemon ./SECTION2/Timing_our_code.js"
   },
   "author": "",
   "license": "ISC",
