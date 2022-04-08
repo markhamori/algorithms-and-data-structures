@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "section2": "nodemon ./SECTION2/Timing_our_code.js"
+    "section2": "nodemon ./SECTION2/index.js"
   },
   "author": "",
   "license": "ISC",
