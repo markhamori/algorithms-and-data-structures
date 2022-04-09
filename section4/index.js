@@ -232,4 +232,110 @@ function checkAnagrams(str1, str2) {
   return true;
 }
 
-console.log(checkAnagrams("bananabread", "readbananab"));
+// console.log(checkAnagrams("bananabread", "readbananab"));
+
+// Multiple pointers pattern
+
+// NAIVE SOLUTION - Quadratic Time complexity O(n^2) - space complexity O(1)
+function sumZero(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === 0) {
+        return [arr[i], arr[j]];
+      }
+    }
+  }
+}
+
+// REFACTORED SOLUTION - Linear Time complexity O(n) - Space complexity O(1)
+function sumZeroRef(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+  while (left < right) {
+    let sum = arr[left] + arr[right];
+    if (sum === 0) {
+      return [arr[left], arr[right]];
+    } else if (sum > 0) {
+      right--;
+    } else {
+      left++;
+    }
+  }
+}
+
+// console.log(sumZeroRef([-4, -3, -2, -1, 0, 5, 10]));
+
+// SECOND EXAMPLE
+function countUniqueValues(arr) {
+  if (arr.length === 0) return 0;
+  let i = 0;
+
+  for (let j = 1; j < arr.length; j++) {
+    if (arr[i] !== arr[j]) {
+      i++;
+      arr[i] = arr[j];
+    }
+  }
+  return i + 1;
+}
+
+// console.log(countUniqueValues([1, 1, 1, 1, 1, 2])); // 2
+// console.log(countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13])); // 7
+// countUniqueValues([]); // 0
+// countUniqueValues([-2, -1, -1, 0, 1]); // 4
+
+// Sliding Window Pattern
+// NAIVE SOLUTION ( Quadratic Time complexity O(n^2))
+function maxSubarraySum(arr, num) {
+  if (num > arr.length) {
+    return null;
+  }
+  var max = -Infinity;
+  for (let i = 0; i < arr.length - num + 1; i++) {
+    console.log(arr.length - num + 1);
+    let temp = 0;
+    for (let j = 0; j < num; j++) {
+      temp += arr[i + j];
+    }
+    if (temp > max) {
+      max = temp;
+    }
+  }
+  return max;
+}
+
+// Refactored solution (Linear Time Complexity O(n))
+function maxSubarraySumRef(arr, num) {
+  // Edge case(s)
+  if (arr.length < num) return null;
+
+  // init maxSum and tempSum
+  let maxSum = 0;
+  let tempSum = 0;
+
+  // adding first three digits and store them in maxSum (17)
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i];
+  }
+
+  // tempSum = (0)
+  // after the loop tempSum = 10 so maxSum = 10
+  tempSum = maxSum;
+  // starting the loop with num, cause we got sum above
+  for (let i = num; i < arr.length; i++) {
+    // tempSum = (6 + 9 + 2) - 6 + 1
+    tempSum = tempSum - arr[i - num] + arr[i];
+    // It updates maxSum, if tempSum larger (10)
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  // 10
+  return maxSum;
+}
+
+// console.log(maxSubarraySumRef([2, 6, 9, 2, 1, 8, 5, 6, 3], 3)); //19
+
+// maxSubarraySumRef([1, 2, 5, 2, 8, 1, 5], 2); // 10
+// maxSubarraySumRef([1, 2, 5, 2, 8, 1, 5], 4); // 17
+// maxSubarraySumRef([4, 2, 1, 6], 1); // 6
+// maxSubarraySumRef([4, 2, 1, 6, 2], 4); // 13
+// maxSubarraySumRef([], 4); // null
