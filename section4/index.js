@@ -325,7 +325,7 @@ function maxSubarraySumRef(arr, num) {
   for (let i = num; i < arr.length; i++) {
     // tempSum = (6 + 9 + 2) - 6 + 1
     tempSum = tempSum - arr[i - num] + arr[i];
-    // It updates maxSum, if tempSum larger (10)
+    // It updates maxSum, if tempSum larger (10). We take the maximum from maxSum vs tempSum
     maxSum = Math.max(maxSum, tempSum);
   }
   // 10
