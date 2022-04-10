@@ -155,7 +155,36 @@ function fib2(n) {
 //                     return 2 + 1
 // return 3
 
-console.log(fib2(4)); // 3
+// console.log(fib2(4)); // 3
 // console.log(fib2(10)); // 55
 // console.log(fib2(28)); // 317811
 // console.log(fib2(35)) // 9227465
+
+function reverse(str) {
+  if (str.length <= 1) return str;
+  return reverse(str.slice(1)) + str[0];
+}
+
+console.log(reverse("awesome"));
+
+// reverse("awesome")
+//   return reverse(("wesome") + "a")
+//     reverse("wesome")
+//       return reverse("esome") + "w"
+//         reverse("esome")
+//           return reverse("some") + "e"
+//             reverse("some")
+//               return reverse("ome") + "s"
+//                 reverse("ome")
+//                   return reverse("me") + "o"
+//                     reverse("me")
+//                       return reverse("e") + "m"
+//                         reverse("e")
+//                           return "e"
+//                           "e"
+//                       "m"
+//                   "o"
+//               "s"
+//           "e"
+//       "w"
+//   "a"
