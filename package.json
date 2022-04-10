@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "section2": "nodemon ./section2/index.js",
-    "section4": "nodemon ./section4/index.js"
-    "section5": "nodemon ./section4/index.js"
+    "section4": "nodemon ./section4/index.js",
+    "section5": "nodemon ./section5/index.js",
+    "section6": "nodemon ./section6/index.js"
   },
   "author": "",
   "license": "ISC",
