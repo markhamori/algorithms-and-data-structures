@@ -165,7 +165,7 @@ function reverse(str) {
   return reverse(str.slice(1)) + str[0];
 }
 
-console.log(reverse("awesome"));
+// console.log(reverse("awesome"));
 
 // reverse("awesome")
 //   return reverse(("wesome") + "a")
