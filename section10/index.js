@@ -44,7 +44,11 @@ function naiveSearch(long, short) {
   var count = 0;
   for (var i = 0; i < long.length; i++) {
     for (var j = 0; j < short.length; j++) {
-      if (short[j] !== long[i + j]) break;
+      console.log("LONG: ", long[i + j], "SHORT: ", short[j]);
+      if (short[j] !== long[i + j]) {
+        console.log("#################BREAK##################");
+        break;
+      }
       if (j === short.length - 1) count++;
     }
   }
@@ -52,3 +56,30 @@ function naiveSearch(long, short) {
 }
 
 naiveSearch("lorie loled", "lol");
+
+// LONG:  l SHORT:  l
+// LONG:  o SHORT:  o
+// LONG:  r SHORT:  l
+// #################BREAK##################
+// LONG:  o SHORT:  l
+// #################BREAK##################
+// LONG:  r SHORT:  l
+// #################BREAK##################
+// LONG:  i SHORT:  l
+// #################BREAK##################
+// LONG:  e SHORT:  l
+// #################BREAK##################
+// LONG:    SHORT:  l
+// #################BREAK##################
+// LONG:  l SHORT:  l
+// LONG:  o SHORT:  o
+// LONG:  l SHORT:  l
+// LONG:  o SHORT:  l
+// #################BREAK##################
+// LONG:  l SHORT:  l
+// LONG:  e SHORT:  o
+// #################BREAK##################
+// LONG:  e SHORT:  l
+// #################BREAK##################
+// LONG:  d SHORT:  l
+// #################BREAK##################
