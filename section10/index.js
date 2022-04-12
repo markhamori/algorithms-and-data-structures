@@ -55,7 +55,7 @@ function naiveSearch(long, short) {
   return count;
 }
 
-naiveSearch("lorie loled", "lol");
+// naiveSearch("lorie loled", "lol");
 
 // LONG:  l SHORT:  l
 // LONG:  o SHORT:  o
@@ -83,3 +83,25 @@ naiveSearch("lorie loled", "lol");
 // #################BREAK##################
 // LONG:  d SHORT:  l
 // #################BREAK##################
+
+// Naive string search training
+function naiveSearch2(long, short) {
+  var count = 0;
+  for (let i = 0; i < long.length; i++) {
+    for (let j = 0; j < short.length; j++) {
+      console.log(long[i + j], short[j]);
+      if (short[j] !== long[i + j]) {
+        console.log("BREAK");
+        break;
+      }
+
+      if (j === short.length - 1) {
+        console.log("----count----");
+        count++;
+      }
+    }
+  }
+  return count;
+}
+
+console.log(naiveSearch2("lorie loled", "lol"));
