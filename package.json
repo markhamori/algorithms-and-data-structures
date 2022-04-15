@@ -14,7 +14,8 @@
     "section11": "nodemon ./section11/index.js",
     "section12": "nodemon ./section12/index.js",
     "section13": "nodemon ./section13/index.js",
-    "section15": "nodemon ./section15/index.js"
+    "section15": "nodemon ./section15/index.js",
+    "section16": "nodemon ./section16/index.js"
   },
   "author": "",
   "license": "ISC",
