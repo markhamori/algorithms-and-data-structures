@@ -10,6 +10,7 @@
     "section6": "nodemon ./section6/index.js",
     "section7": "nodemon ./section7/index.js",
     "section8": "nodemon ./section8/index.js",
+    "section9": "nodemon ./section9/challenges.js",
     "section10": "nodemon ./section10/index.js",
     "section11": "nodemon ./section11/index.js",
     "section12": "nodemon ./section12/index.js",
