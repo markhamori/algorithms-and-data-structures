@@ -18,7 +18,8 @@
     "section15": "nodemon ./section15/index.js",
     "section16": "nodemon ./section16/index.js",
     "section17": "nodemon ./section17/radix.js",
-    "section19": "nodemon ./section19/singly_linked_list.js"
+    "section19": "nodemon ./section19/singly_linked_list.js",
+    "section20": "nodemon ./section20/doubly_linked_list.js"
   },
   "author": "",
   "license": "ISC",
