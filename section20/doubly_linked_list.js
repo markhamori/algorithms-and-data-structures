@@ -113,7 +113,7 @@ class DoublyLinkedList {
   }
 
   insert(index, val) {
-    if (index < 0 || index >= this.length) return false;
+    if (index < 0 || index > this.length) return false;
     if (index === 0) return !!this.unshift(val);
     if (index === this.length) return !!this.push(val);
 
@@ -129,13 +129,32 @@ class DoublyLinkedList {
     this.length++;
     return true;
   }
+
+  remove(index) {
+    if (index < 0 || index >= this.length) return false;
+    if (index === 0) return this.shift();
+    if (index === this.length - 1) return this.pop();
+
+    var foundNode = this.get(index);
+    var prevNode = foundNode.prev;
+    var nextNode = foundNode.next;
+
+    prevNode.next = nextNode;
+    nextNode.prev = prevNode;
+    foundNode.prev = null;
+    foundNode.next = null;
+
+    this.length--;
+    return foundNode;
+  }
 }
 
 var list = new DoublyLinkedList();
-list.push(99);
-list.push(100);
-list.push(400);
-list.push(600);
-list.push(450);
-console.log(list.set(1, 85));
-console.log(list.get(1));
+list.push("Harry");
+list.push("Ron");
+list.push("Hermione");
+list.push("Dumbledor");
+list.push("Gollum");
+
+console.log(list.remove(1));
+console.log(list);
