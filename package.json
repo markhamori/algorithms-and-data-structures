@@ -22,7 +22,8 @@
     "section20": "nodemon ./section20/doubly_linked_list.js",
     "section20E": "nodemon ./section20/exercise.js",
     "section21A": "nodemon ./section21/stacks.js",
-    "section21B": "nodemon ./section21/queues.js"
+    "section21B": "nodemon ./section21/queues.js",
+    "section22": "nodemon ./section22/binary_trees.js"
   },
   "author": "",
   "license": "ISC",
