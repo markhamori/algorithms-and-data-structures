@@ -20,9 +20,9 @@
     "section17": "nodemon ./section17/radix.js",
     "section19": "nodemon ./section19/singly_linked_list.js",
     "section20": "nodemon ./section20/doubly_linked_list.js",
+    "section20E": "nodemon ./section20/exercise.js",
     "section21A": "nodemon ./section21/stacks.js",
-    "section21B": "nodemon ./section21/queues.js",
-    "section21E": "nodemon ./section21/exercise.js"
+    "section21B": "nodemon ./section21/queues.js"
   },
   "author": "",
   "license": "ISC",
