@@ -25,7 +25,8 @@
     "section21B": "nodemon ./section21/queues.js",
     "section22": "nodemon ./section22/binary_trees.js",
     "section22E": "nodemon ./section22/exercise.js",
-    "section23": "nodemon ./section23/tree_traversal.js"
+    "section23": "nodemon ./section23/tree_traversal.js",
+    "section23E": "nodemon ./section23/exercise.js"
   },
   "author": "",
   "license": "ISC",
