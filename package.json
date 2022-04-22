@@ -28,7 +28,8 @@
     "section23": "nodemon ./section23/tree_traversal.js",
     "section23E": "nodemon ./section23/exercise.js",
     "section24A": "nodemon ./section24/binary_heaps.js",
-    "section24B": "nodemon ./section24/priority_queue.js"
+    "section24B": "nodemon ./section24/priority_queue.js",
+    "section25": "nodemon ./section25/hash_tables.js"
   },
   "author": "",
   "license": "ISC",
