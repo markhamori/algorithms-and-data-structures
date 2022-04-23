@@ -29,7 +29,8 @@
     "section23E": "nodemon ./section23/exercise.js",
     "section24A": "nodemon ./section24/binary_heaps.js",
     "section24B": "nodemon ./section24/priority_queue.js",
-    "section25": "nodemon ./section25/hash_tables.js"
+    "section25": "nodemon ./section25/hash_tables.js",
+    "section26": "nodemon ./section26/graphs.js"
   },
   "author": "",
   "license": "ISC",
