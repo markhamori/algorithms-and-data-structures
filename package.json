@@ -31,7 +31,8 @@
     "section24B": "nodemon ./section24/priority_queue.js",
     "section25": "nodemon ./section25/hash_tables.js",
     "section26": "nodemon ./section26/graphs.js",
-    "section27": "nodemon ./section27/graph_traversal.js"
+    "section27": "nodemon ./section27/graph_traversal.js",
+    "section28": "nodemon ./section28/dijkstra.js"
   },
   "author": "",
   "license": "ISC",
