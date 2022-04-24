@@ -22,6 +22,7 @@ class SingleLinkedList {
       this.head = newNode;
       this.tail = newNode;
     } else {
+      // Need to ignore all duplicated values
       if (newNode.val === this.tail.val) return null;
       prevTail.next = newNode;
       this.tail = newNode;
