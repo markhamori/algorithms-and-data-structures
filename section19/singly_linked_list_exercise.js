@@ -73,11 +73,11 @@ function getNodes() {
     div.classList.add("nodes");
     div.classList.add(`node-${node.val}`);
     if (sll.get()[0].val === node.val) {
-      div.innerText = `${node.val} \n Head`;
+      div.innerText = `${node.val} \n Head \n Next: ${node.next.val}`;
     } else if (sll.get()[sll.get().length - 1].val === node.val) {
-      div.innerText = `${node.val} \n Tail`;
+      div.innerText = `${node.val} \n Tail \n Next: ${null}`;
     } else {
-      div.innerText = node.val;
+      div.innerText = `${node.val} \n Next: ${node.next.val}`;
     }
 
     nodeContainer.append(div);

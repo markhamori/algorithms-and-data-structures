@@ -41,6 +41,7 @@ class BinarySearchTree {
       }
     }
   }
+
   contains(value) {
     if (this.root === null) return false;
     var current = this.root;
@@ -114,6 +115,4 @@ tree.insert(15);
 tree.insert(3);
 tree.insert(8);
 tree.insert(20);
-console.log(tree.DFSPreOrder());
-console.log(tree.DFSPostOrder());
-console.log(tree.DFSInOrder());
+console.log(tree.BFS());

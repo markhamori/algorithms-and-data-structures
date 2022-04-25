@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
 body {
   box-sizing: border-box;
   margin: 2rem;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(29, 26, 26);
+}
+
+h1, h2 {
+  color: #fff;
 }
 
 #button {
@@ -34,13 +42,12 @@ body {
   margin-right: 1rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-  width: 5rem;
-  height: 5rem;
+  width: 150px;
+  height: 150px;
   background-color: aquamarine;
   font-size: 1.5em;
-  font-weight: 700;
+  font-weight: 300;
   text-align: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   border-radius: 5px;
   border: 2px solid rgb(110, 213, 179);
   transition: all 0.5s ease;
@@ -49,8 +56,8 @@ body {
 .node-value {
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   border-radius: 5px;
   border: 2px solid rgb(110, 213, 179);
   outline: none;
