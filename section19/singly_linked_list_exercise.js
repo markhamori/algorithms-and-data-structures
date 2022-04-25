@@ -157,7 +157,7 @@ sll.push(8);
 sll.push(3);
 
 // console.log(sll.delete(10));
-console.log(sll.insert(6, 21));
+// console.log(sll.insert(6, 21));
 // console.log(sll.findOne(3));
 // console.log(sll.findAll());
 
@@ -193,3 +193,32 @@ function getNodes() {
 }
 
 getNodes();
+
+// Linear search
+const array = [1, 4, 6, 12, 18, 20, 32, 45];
+
+function linearSearch(arr, num) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === num) return i;
+  }
+  return -1;
+}
+
+function binarySearch(arr, val) {
+  let start = arr[0];
+  let end = arr.length - 1;
+  let middle = Math.round((start + end) / 2);
+
+  while (arr[middle] !== val && start <= end) {
+    if (arr[middle] > val) end = middle - 1;
+    else start = middle + 1;
+
+    middle = Math.round((start + end) / 2);
+  }
+
+  return arr[middle] === val ? middle : -1;
+}
+//  s     m   e
+// [1, 4, 6, 12, 18, 20, 32, 45]
+
+console.log(binarySearch(array, 6));
