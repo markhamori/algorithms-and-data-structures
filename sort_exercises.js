@@ -60,18 +60,3 @@ function selectionSort(arr) {
 }
 
 console.log(selectionSort([5, 3, 4, 1, 2]));
-
-//   i  j
-//  [5, 3, 4, 1, 2]
-//
-//  i   j
-//  [5, 3, 4, 1, 2]
-//
-//   i        j
-//  [5, 3, 4, 1, 2]
-//
-//   j        lowest
-//  [5, 3, 4,   1,   2]
-//
-// lowest
-//  [5,   3, 4,   1,   2]
