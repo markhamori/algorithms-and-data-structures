@@ -90,7 +90,7 @@ function mergeSort(arr1, arr2) {
   return results;
 }
 
-// console.log(mergeSort([1, 3, 5, 7, 10], [1, 3, 4, 32, 53]));
+console.log(mergeSort([1, 3, 5, 7, 10], [1, 3, 4, 32, 53]));
 
 // Recursive quickSort
 function quickSort(array) {
